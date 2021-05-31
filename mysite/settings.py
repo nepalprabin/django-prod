@@ -25,7 +25,7 @@ SECRET_KEY = 'm2e!q4x&7&-&z1&j%6!%l)a_qj7fp$$393sepmxuc9wo&!mmo3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
