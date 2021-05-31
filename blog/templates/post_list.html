@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+    {% block body %}
+        {% for post in posts %}
+        <article class="container">
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.text }}</p>
+            <time>Published date: {{post.published_date}}</time>
+        </article>
+        <hr>
+        {% endfor %}
+    {% if posts.has_other_pages %}
+        <nav aria-label="Page navigation container"></nav>
+        <ul class="pagination justify-content-center">
+            {% if posts.has_previous %}
+                <button><a href="?page={{ posts.previous_page_number }}">&laquo; PREV</a></button>
+            {% endif %}
+            {% if posts.has_next %}
+            <button><a href="?page={{ posts.next_page_number }}">NEXT &raquo;</a></button>
+            {% endif %}
+        </ul>
+    {% endif %}
+{% endblock %}
