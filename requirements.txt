@@ -1,5 +1,5 @@
 asgiref
-Django==3.1.8
-gunicorn==20.0.4
-pytz==2019.3
-sqlparse==0.3.0
+Django
+gunicorn
+pytz
+sqlparse
